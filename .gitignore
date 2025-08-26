@@ -1,0 +1,15 @@
+node_modules/
+web/node_modules/
+.next/
+web/.next/
+*.log
+.env
+.env.local
+web/.env.local
+.venv/
+__pycache__/
+*.pyc
+pmagent_data/
+.DS_Store
+.vscode/
+.idea/
