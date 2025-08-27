@@ -1,27 +1,14 @@
-# PM Agent
+# PMA – Project Management Agent
 
-Modern PM onboarding agent with:
-- FastAPI backend (pmagent_api.py) wrapping pmagent.py
-- Next.js + Tailwind frontend in /web with a 6-step onboarding wizard
+This repository contains:
 
-Quick Start
+- **Backend (FastAPI + PMAgent)** for project onboarding and management.
+- **Frontend (Next.js + Chakra UI)** for the onboarding wizard.
 
-Backend:
-python -m uvicorn pmagent_api:app --host 0.0.0.0 --port 8000 --reload
+## Getting Started
 
-Frontend:
+### Frontend
+```bash
 cd web
-echo "NEXT_PUBLIC_API_BASE=http://localhost:8000" > .env.local
-npm i
+npm install
 npm run dev
-
-Common Issues
-- Port busy: npx kill-port 3000  (or 8000)
-- CORS: API allows http://localhost:3000 by default (see pmagent_api.py)
-- Network Error in UI: frontend uses fetch in web/lib/api.ts
-
-Repo Structure
-pmagent.py
-pmagent_api.py
-web/
-pmagent_data/
